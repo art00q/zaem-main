@@ -1,0 +1,40 @@
+.infoCard {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    color: #111B1E;
+  
+    &__badge {
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 20px;
+      text-align: center;
+      color: var(--color-main);
+      padding: 6px 12px;
+      background: rgba(#2F62F6, 0.08);
+      border-radius: 50px;
+      margin-bottom: 36px;
+  
+      &+.infoCard__icon-wrapper {
+        margin-top: 0;
+      }
+    }
+  
+    &__icon-wrapper {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 16px;
+      margin-top: 42px;
+    }
+  
+    &__title {
+      margin-bottom: 8px;
+    }
+  
+    &__description {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }

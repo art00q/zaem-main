@@ -1,0 +1,12 @@
+<section class="infoCards">
+    <div class="left">
+        <div class="sticky-wrapper">
+            <h2 class="infoCards__title">
+                {{ title }}
+            </h2>
+        </div>
+    </div>
+    <div class="infoCards__cards">
+        <app-card *ngFor="let card of cards" [cardData]="card"></app-card>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<div class="advantagesMain">
+  <div class="advantagesMain__grid">
+    <div class="advantagesMain__cards">
+      <div class="advantagesMain__progress-wrapper">
+        <div class="advantagesMain__progress-header">
+          <div class="advantagesMain__progress-title">
+            Наши преимущества
+          </div>
+          <div class="advantagesMain__progress-pagination">
+            <span class="advantagesMain__progress-pagination-current">
+              {{ currentCardIndex + 1 }}
+            </span>/{{ cards.length }}
+          </div>
+        </div>
+        <div class="advantagesMain__progress-bullets">
+          <div *ngFor="let card of cards; let i = index"
+               [class.active]="i <= currentCardIndex"
+               class="advantagesMain__progress-bullet">
+            <div class="advantagesMain__progress-bullet-bar"></div>
+          </div>
+        </div>
+      </div>
+      <app-advantages-card
+        *ngFor="let card of cards; let i = index"
+        [cardData]="card"
+        [class.active]="i === currentCardIndex">
+      </app-advantages-card>
+    </div>
+    <div class="advantagesMain__images">
+      <div
+        *ngFor="let card of cards; let i = index"
+        class="advantagesMain__image"
+        appSpyScroll
+        (isVisibleChange)="onImageVisibilityChange($event, i)">
+        <img [src]="card.image" width="570" height="370" loading="lazy" alt="">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+    <section class="heroMain">
+        <div class="heroMain__content">
+            <div class="heroMain__badge">
+                <app-badge text="Деньги у вас через 10 минут"></app-badge>
+            </div>
+            <h1 class="heroMain__title">
+                Первый и каждый шестой займ под <strong>0%</strong>
+            </h1>
+            <div class="heroMain__description">
+                <p>Заём.ру - самый быстрый сервис по выдаче займов на карту.</p>
+                <p>
+                    <span>Первый</span> и каждый <span>шестой</span> займ <strong>бесплатно!</strong>
+                </p>
+            </div>
+            <div class="heroMain__methods">
+                <div class="heroMain__methods-title">
+                    Способы получения займа:
+                </div>
+                <div class="heroMain__methods-logos">
+                    <img src="assets/images/logo-mir.png" width="40" height="40" alt="">
+                    <img src="assets/images/logo-visa.png" width="40" height="40" alt="">
+                    <img src="assets/images/logo-mastercard.png" width="40" height="40" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="calculator">
+            <app-loan-form></app-loan-form>
+        </div>
+    </section>
+</div>
+<app-banks></app-banks>
+<div class="container">
+    <app-advantages-slider [cards]="advantagesCards"></app-advantages-slider>
+    <app-how-it-works title="Как это работает"></app-how-it-works>
+    <app-loan-form [isHorizontal]="true"></app-loan-form>
+    <app-app-cta></app-app-cta>
+</div>

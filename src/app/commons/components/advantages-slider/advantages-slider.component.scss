@@ -1,0 +1,130 @@
+.advantagesMain {
+    padding: 75px 0;
+  
+    &__progress-wrapper {
+      position: absolute;
+      max-width: 270px;
+      width: 100%;
+      top: 80px;
+  
+      @media screen and (max-width: 1023px) {
+        position: sticky;
+        top: 62px;
+        padding: 14px 0;
+        background: #F4F5F6;
+        width: 100%;
+        max-width: 100%;
+        z-index: 3;
+      }
+    }
+  
+    &__progress-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+  
+    &__progress-title {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.4px;
+      color: rgba(#1B1F3B, 0.65);
+    }
+  
+    &__progress-pagination {
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 16px;
+      letter-spacing: 0.4px;
+      text-align: right;
+      color: rgba(#1B1F3B, 0.65);
+    }
+  
+    &__progress-pagination-current {
+      color: var(--color-main);
+    }
+  
+    &__progress-bullets {
+      display: flex;
+      gap: 4px;
+    }
+  
+    &__progress-bullet {
+      background: #E0E0E0;
+      border-radius: 4px;
+      position: relative;
+      height: 4px;
+      flex: 1;
+    }
+  
+    &__progress-bullet-bar {
+      height: 100%;
+      left: 0;
+      width: 0;
+      border-radius: 4px;
+      background: var(--color-main);
+    }
+  
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      gap: 30px;
+  
+      @media screen and (max-width: 1023px) {
+        display: block;
+      }
+    }
+  
+    &__cards {
+      position: sticky;
+      top: 0;
+      min-height: 460px;
+  
+      @media screen and (max-width: 1023px) {
+        position: relative;
+        min-height: auto;
+        top: auto !important;
+      }
+    }
+  
+    &__images {
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+  
+    &__image {
+      padding: 45px 0;
+      min-height: 60vh;
+    }
+  }
+
+  .advantagesMain__progress-bullet {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  
+    &.active {
+      opacity: 1;
+      background-color: var(--color-main);
+    }
+  }
+  
+  app-advantages-card {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+
+    @media screen and (max-width: 1023px) {
+      opacity: 1;
+    }
+  
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.4s 0.2s ease, visibility 0.4s 0.2s ease, transform 0.4s 0.2s ease;
+    }
+  }
+  

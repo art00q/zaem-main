@@ -1,0 +1,14 @@
+<div class="infoCard">
+    <div *ngIf="cardData.badge" class="infoCard__badge">
+        {{ cardData.badge }}
+    </div>
+    <div class="infoCard__icon-wrapper">
+        <img class="icon" [src]="cardData.icon" width="64" height="64" loading="lazy" alt="">
+    </div>
+    <h4 class="infoCard__title">
+        {{ cardData.title }}
+    </h4>
+    <div class="infoCard__description">
+        {{ cardData.description }}
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.appsNotification {
+    background: #fff;
+  
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+  
+    &__title {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  
+    &__links {
+      gap: 30px;
+      margin-right: 160px;
+  
+      @media screen and (max-width: 1200px) {
+        margin: 0;
+        gap: 16px;
+      }
+    }
+  
+    &__close {
+      display: block;
+      cursor: pointer;
+      background: transparent;
+      padding: 0;
+      border: 0;
+      box-shadow: none;
+      color: rgba(#1B1F3B, 0.65);
+      transition: color 0.2s ease;
+  
+      &:hover {
+        color: #1B1F3B;
+      }
+    }
+  }

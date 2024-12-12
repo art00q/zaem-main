@@ -1,0 +1,78 @@
+.advantagesMainCard {
+    padding: 45px 0;
+    opacity: 1;
+    visibility: visible;
+    min-height: 460px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    @media screen and (max-width: 1023px) {
+      position: static;
+      min-height: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+  
+    &__content {
+      padding-top: 83px;
+  
+      @media screen and (max-width: 1023px) {
+        padding: 0;
+      }
+    }
+  
+    &__text {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 28px;
+  
+      @media screen and (max-width: 767px) {
+        font-size: 15px;
+        line-height: 24px;
+      }
+  
+      h3 {
+        margin-bottom: 24px !important;
+  
+        @media screen and (max-width: 767px) {
+          margin-bottom: 16px !important;
+        }
+      }
+  
+      a {
+        color: var(--color-main);
+        text-decoration-color: var(--color-main);
+        transition: text-decoration-color 0.2s ease;
+  
+        &:hover {
+          text-decoration-color: transparent;
+        }
+      }
+    }
+  
+    &__button {
+      margin-top: 46px !important;
+  
+      @media screen and (max-width: 767px) {
+        margin-top: 30px !important;
+      }
+    }
+  
+    &__image {
+      display: none;
+  
+      @media screen and (max-width: 1023px) {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }

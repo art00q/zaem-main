@@ -1,0 +1,19 @@
+body {
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  font-variant-ligatures: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-anchor: none;
+}
+
+button {
+  color: var(--color-text);
+  touch-action: manipulation;
+}

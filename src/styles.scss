@@ -1,0 +1,129 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+@import "./assets/base/_variables.scss";
+@import "./assets/base/_reset.scss";
+@import "./assets/base/_fonts.scss";
+@import "./assets/base/_base.scss";
+@import "./assets/base/_layout.scss";
+@import "./assets/base/_typography.scss";
+
+// Components
+// @import "../../components/**/*.scss";
+html, body { height: 100%; }
+body { margin: 0; font-family: Manrope, sans-serif; }
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 8px;
+  height: 56px;
+  font-size: 17px;
+  font-weight: 800;
+  padding-left: 36px;
+  padding-right: 36px;
+  line-height: 1;
+  color: #fff;
+  font-family: var(--font-main);
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  background: var(--color-main);
+  border: 1px solid var(--color-main);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  user-select: none;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    color: #fff;
+    background: #4675FF;
+    border: 1px solid #4675FF;
+  }
+
+  &:active {
+    color: #fff;
+    background: #1A47C9;
+    border: 1px solid #1A47C9;
+  }
+
+  &--size-m {
+    height: 44px;
+    font-size: 15px;
+    gap: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &--full {
+    display: flex;
+    width: 100%;
+  }
+
+  &--white {
+    color: var(--color-main);
+    background: #fff;
+    border-color: #fff;
+
+    &:hover {
+      color: var(--color-main);
+      background: #F4F4F4;
+      border-color: #F4F4F4;
+    }
+  }
+
+  &--loading {
+    color: transparent !important;
+    cursor: progress !important;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      border-top: 2px solid #fff;
+      border-radius: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      animation: spinner 0.6s infinite linear;
+      content: "";
+    }
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+
+    to {
+      transform: translateX(-50%) translateY(-50%) rotate(359deg);
+    }
+  }
+}

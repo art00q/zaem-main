@@ -1,0 +1,36 @@
+.banki {
+    background: #fff;
+    padding: 35px 0;
+    text-align: center;
+  
+    @media screen and (max-width: 767px) {
+      padding: 25px 0;
+    }
+  
+    &__title {
+      margin-bottom: 24px;
+      gap: 8px;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 28px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+  
+      @media screen and (max-width: 767px) {
+        font-size: 15px;
+        line-height: 24px;
+      }
+  
+      strong {
+        color: var(--color-main);
+      }
+    }
+  
+    &__logo {
+      display: block;
+      margin: 0 auto;
+    }
+  }
